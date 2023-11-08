@@ -1,3 +1,5 @@
+@import "./styles/index";
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -7,4 +9,110 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-size: 2rem;
+}
+
+:root {
+  --background-100: hsl(222, 26%, 31%);
+  --background-200: hsl(223, 31%, 20%);
+
+  --background-300: hsl(224, 36%, 15%);
+
+  --key-del-reset-100: hsl(225, 21%, 49%);
+  --key-del-reset-200: hsl(224, 28%, 35%);
+  --hover-del-reset-100: hsl(224, 51%, 76%);
+
+  --key-equal-100: hsl(6, 63%, 50%);
+  --key-equal-200: hsl(6, 70%, 34%);
+  --hover-equal-100: hsl(6, 93%, 67%);
+
+  --key-nums-100: hsl(30, 25%, 89%);
+  --key-nums-200: hsl(28, 16%, 65%);
+  --hover-nums-100: hsl(224, 51%, 100%);
+
+  --text-100: hsl(221, 14%, 31%);
+  --text-200: hsl(0, 0%, 100%);
+
+  --opacity: 0.5;
+}
+
+body {
+  background: var(--background-100);
+  font-weight: 700;
+}
+// // _____________________THEME 1 COLORS_____________________
+
+body[data-theme="theme-1"] {
+  --background-100: hsl(224, 36%, 15%);
+  --background-100: hsl(222, 26%, 31%);
+  --background-200: hsl(223, 31%, 20%);
+
+  --key-del-reset-100: hsl(225, 21%, 49%);
+  --key-del-reset-100: hsl(224, 28%, 35%);
+
+  --key-equal-100: hsl(6, 63%, 50%);
+  --key-equal-200: hsl(6, 70%, 34%);
+
+  --key-nums-100: hsl(30, 25%, 89%);
+  --key-nums-200: hsl(28, 16%, 65%);
+
+  --display-text: hsl(0, 0%, 100%);
+  --text-200: hsl(221, 14%, 31%);
+  --text-100: hsl(0, 0%, 100%);
+}
+// // _____________________THEME 2 COLORS_____________________
+body[data-theme="theme-2"] {
+  --background-100: hsl(0, 0%, 93%);
+  --background-100: hsl(0, 0%, 90%);
+  --background-200: hsl(0, 5%, 81%);
+
+  --key-del-reset-100: hsl(185, 42%, 37%);
+  --key-del-reset-200: hsl(185, 58%, 25%);
+
+  --key-equal-100: hsl(25, 98%, 40%);
+  --key-equal-200: hsl(25, 99%, 27%);
+
+  --key-nums-100: hsl(45, 7%, 89%);
+  --key-nums-200: hsl(35, 11%, 61%);
+
+  --display-text: hsl(60, 10%, 19%);
+  --text-100: hsl(60, 10%, 19%);
+  --text-200: hsl(0, 0%, 100%);
+}
+
+// // _____________________THEME 3 COLORS_____________________
+body[data-theme="theme-3"] {
+  --background-100: hsl(268, 75%, 9%);
+  --background-200: hsl(268, 71%, 12%);
+
+  --key-del-reset-100: hsl(285, 91%, 52%);
+  --key-del-reset-200: hsl(281, 89%, 26%);
+
+  --key-equal-100: hsl(25, 98%, 40%);
+  --key-equal-200: hsl(25, 99%, 27%);
+
+  --key-nums-100: hsl(281, 89%, 26%);
+  --key-nums-200: hsl(285, 91%, 52%);
+
+  --display-text: hsl(52, 100%, 62%);
+  --text-100: hsl(52, 100%, 62%);
+  --text-200: hsl(198, 20%, 13%);
+  --text-300: hsl(0, 0%, 100%);
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  height: 60px;
 }

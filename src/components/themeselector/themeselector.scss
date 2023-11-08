@@ -1,0 +1,29 @@
+@import "/src/styles/index";
+.themeselector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  &__label {
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 50px;
+  }
+
+  &__button {
+    background: none;
+    cursor: pointer;
+    height: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__indicator {
+    width: 50px;
+    height: 25px;
+
+    border-radius: 500px;
+  }
+}
