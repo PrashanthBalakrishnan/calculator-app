@@ -58,7 +58,10 @@ export function reducer(
         };
       }
       if (state.currentOperand === "-") {
-        return state;
+        return {
+          ...state,
+          operation: payload?.operation ?? "",
+        };
       }
       if (state.currentOperand === "" && state.previousOperand === "")
         return state;
@@ -78,7 +81,7 @@ export function reducer(
         ...state,
         operation: payload?.operation ?? "",
         previousOperand: evaluate(state),
-        currentOperand: evaluate(state),
+        currentOperand: "",
       };
     }
     case ACTIONS.CLEAR: {

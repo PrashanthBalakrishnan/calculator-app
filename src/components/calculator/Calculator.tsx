@@ -7,10 +7,11 @@ import Themeselector from "../themeselector/Themeselector";
 import { formatOperand } from "../../utils/utils";
 
 const Calculator = () => {
-  const [{ currentOperand, operation }, dispatch] = useReducer(
+  const [{ previousOperand, currentOperand, operation }, dispatch] = useReducer(
     reducer,
     initState
   );
+  console.log(previousOperand, currentOperand, operation);
   return (
     <main className="calculator">
       <header className="calculator__header">
@@ -19,7 +20,10 @@ const Calculator = () => {
       </header>
       <div>
         <div className="calculator__screen">
-          {formatOperand(currentOperand)} {operation}
+          <small className="calculator__previous">{previousOperand}</small>
+          <span>
+            {formatOperand(currentOperand)} {operation}
+          </span>
         </div>
       </div>
       <div className="calculator__buttons">

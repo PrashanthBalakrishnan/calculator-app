@@ -27,9 +27,20 @@
     max-width: 100%;
     color: var(--display-text);
     width: 488px;
+    position: relative;
     @media (max-width: 500px) {
       width: 327px;
       font-size: 2rem;
+    }
+  }
+  &__previous {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    opacity: 0.5;
+    top: 10px;
+    position: absolute;
+    @media (max-width: 500px) {
+      font-size: 1rem;
     }
   }
 
@@ -70,4 +81,9 @@
 
 .span-two {
   grid-column: span 2;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
 }
