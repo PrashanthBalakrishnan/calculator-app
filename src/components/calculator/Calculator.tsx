@@ -3,7 +3,8 @@ import "./calculator.scss";
 import { useReducer } from "react";
 import { ACTIONS, initState, reducer } from "../../reducer/Reducer";
 import OperationButton from "../operationButton/OperationButton";
-import Themeselector from "../themeselector/themeselector";
+import Themeselector from "../themeselector/Themeselector";
+import { formatOperand } from "../../utils/utils";
 
 const Calculator = () => {
   const [{ currentOperand, operation }, dispatch] = useReducer(
@@ -18,7 +19,7 @@ const Calculator = () => {
       </header>
       <div>
         <div className="calculator__screen">
-          {currentOperand} {operation}
+          {formatOperand(currentOperand)} {operation}
         </div>
       </div>
       <div className="calculator__buttons">

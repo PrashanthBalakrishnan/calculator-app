@@ -3,28 +3,26 @@ const Themeselector = () => {
   return (
     <div className="themeselector">
       <p className="themeselctor__label">Theme</p>
-      <div>
-        <div className="themeselector__buttons">
-          <button
-            className="themeselector__button"
-            onClick={() => document.body.setAttribute("data-theme", "theme-1")}
-          >
-            1
-          </button>
-          <button
-            className="themeselector__button"
-            onClick={() => document.body.setAttribute("data-theme", "theme-2")}
-          >
-            2
-          </button>
-          <button
-            className="themeselector__button"
-            onClick={() => document.body.setAttribute("data-theme", "theme-3")}
-          >
-            3
-          </button>
+      <div className="themetoggle">
+        <div className="themetoggle__buttons">
+          <div className="themetoggle__label">1</div>
+          <div className="themetoggle__label">2</div>
+          <div className="themetoggle__label">3</div>
         </div>
-        <div className="themeselector__indicator" />
+        <div className="themetoggle__indicator">
+          <button
+            className="themetoggle__button"
+            onClick={() => document.body.setAttribute("data-theme", "theme-1")}
+          />
+          <button
+            className="themetoggle__button2"
+            onClick={() => document.body.setAttribute("data-theme", "theme-2")}
+          />
+          <button
+            className="themetoggle__button3"
+            onClick={() => document.body.setAttribute("data-theme", "theme-3")}
+          />
+        </div>
       </div>
     </div>
   );

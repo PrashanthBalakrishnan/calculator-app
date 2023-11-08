@@ -30,6 +30,19 @@ export function reducer(
   switch (type) {
     // ADDS A DIGIT TO THE CURRENT OPERAND
     case ACTIONS.ADD_DIGIT: {
+      if (state.overwrite) {
+        return {
+          ...state,
+          currentOperand: payload?.digit ?? "",
+          overwrite: false,
+        };
+      }
+      if (state.currentOperand.length > 14 || state.previousOperand.length > 14)
+        return state;
+      if (payload?.digit === "0" && state.currentOperand === "0") return state;
+      if (payload?.digit === "." && state.currentOperand.includes("."))
+        return state;
+
       return {
         ...state,
         currentOperand: `${state.currentOperand || ""}${payload?.digit}`,
@@ -56,7 +69,7 @@ export function reducer(
         ...state,
         operation: payload?.operation ?? "",
         previousOperand: evaluate(state),
-        currentOperand: "",
+        currentOperand: evaluate(state),
       };
     }
     case ACTIONS.CLEAR: {
@@ -84,6 +97,11 @@ export function reducer(
 
     // EVALUATE THE CURRENT OPERATION
     case ACTIONS.EVALUATE: {
+      if (state.currentOperand.length > 14 || state.previousOperand.length > 14)
+        return {
+          ...state,
+          currentOperand: "ERROR - TOO LONG",
+        };
       if (
         state.currentOperand === "" ||
         state.previousOperand === "" ||

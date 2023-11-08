@@ -1,9 +1,9 @@
 .digitbutton {
-  background-color: var(--key-nums-100);
-  box-shadow: 0px 4px var(--key-nums-200);
+  background-color: var(--digit-op-background-color);
+  box-shadow: 0px 4px var(--digit-op-boxshadow-color);
   border-radius: 10px;
-  color: var(--text-100);
+  color: var(--digit-op-text-color);
   &:hover {
-    background-color: var(--hover-nums-100);
+    background-color: var(--digit-op-hover);
   }
 }

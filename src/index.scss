@@ -1,4 +1,61 @@
 @import "./styles/index";
+:root {
+  // background-colors
+  --app-background-color: hsl(222, 26%, 31%);
+  --screen-background-color: hsl(224, 36%, 15%);
+  --buttons-background-color: hsl(223, 31%, 20%);
+
+  // digit-buttons
+
+  --digit-op-background-color: hsl(30, 25%, 89%);
+  --digit-op-boxshadow-color: hsl(28, 16%, 65%);
+  --digit-op-text-color: hsl(221, 14%, 31%);
+  --digit-op-hover: hsl(32, 26%, 100%);
+
+  // del-reset-buttons
+  --del-reset-background-color: hsl(225, 21%, 49%);
+  --del-reset-boxshadow-color: hsl(224, 28%, 35%);
+  --del-reset-text-color: hsl(300, 100%, 100%);
+  --del-reset-hover: hsl(224, 51%, 76%);
+
+  // equal-toggle-button
+  --eq-toggle-background-color: hsl(6, 63%, 50%);
+  --eq-toggle-boxshadow-color: hsl(6, 70%, 34%);
+  --eq-toggle-text-color: hsl(15, 100%, 98%);
+  --eq-toggle-hover: hsl(6, 93%, 67%);
+
+  // text-color
+  --text-color: hsl(180, 100%, 99%);
+
+  //THEME TOGGLE CONTROL
+  .themetoggle__button {
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.2s ease-in;
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+      background-color: hsl(6, 93%, 67%);
+    }
+  }
+  .themetoggle__button2 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(25, 98%, 40%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(25, 100%, 61%);
+    }
+  }
+  .themetoggle__button3 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(176, 100%, 44%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(177, 100%, 79%);
+    }
+  }
+}
 
 html {
   font-size: 100%;
@@ -21,92 +78,185 @@ html {
   font-size: 2rem;
 }
 
-:root {
-  --background-100: hsl(222, 26%, 31%);
-  --background-200: hsl(223, 31%, 20%);
-
-  --background-300: hsl(224, 36%, 15%);
-
-  --key-del-reset-100: hsl(225, 21%, 49%);
-  --key-del-reset-200: hsl(224, 28%, 35%);
-  --hover-del-reset-100: hsl(224, 51%, 76%);
-
-  --key-equal-100: hsl(6, 63%, 50%);
-  --key-equal-200: hsl(6, 70%, 34%);
-  --hover-equal-100: hsl(6, 93%, 67%);
-
-  --key-nums-100: hsl(30, 25%, 89%);
-  --key-nums-200: hsl(28, 16%, 65%);
-  --hover-nums-100: hsl(224, 51%, 100%);
-
-  --text-100: hsl(221, 14%, 31%);
-  --text-200: hsl(0, 0%, 100%);
-
-  --opacity: 0.5;
-}
-
 body {
-  background: var(--background-100);
+  background: var(--app-background-color);
   font-weight: 700;
 }
 // // _____________________THEME 1 COLORS_____________________
 
 body[data-theme="theme-1"] {
-  --background-100: hsl(224, 36%, 15%);
-  --background-100: hsl(222, 26%, 31%);
-  --background-200: hsl(223, 31%, 20%);
+  // background-colors
+  --app-background-color: hsl(222, 26%, 31%);
+  --screen-background-color: hsl(224, 36%, 15%);
+  --buttons-background-color: hsl(223, 31%, 20%);
 
-  --key-del-reset-100: hsl(225, 21%, 49%);
-  --key-del-reset-100: hsl(224, 28%, 35%);
+  // digit-buttons
 
-  --key-equal-100: hsl(6, 63%, 50%);
-  --key-equal-200: hsl(6, 70%, 34%);
+  --digit-op-background-color: hsl(30, 25%, 89%);
+  --digit-op-boxshadow-color: hsl(28, 16%, 65%);
+  --digit-op-text-color: hsl(221, 14%, 31%);
+  --digit-op-hover: hsl(32, 26%, 100%);
 
-  --key-nums-100: hsl(30, 25%, 89%);
-  --key-nums-200: hsl(28, 16%, 65%);
+  // del-reset-buttons
+  --del-reset-background-color: hsl(225, 21%, 49%);
+  --del-reset-boxshadow-color: hsl(224, 28%, 35%);
+  --del-reset-text-color: hsl(300, 100%, 100%);
+  --del-reset-hover: hsl(224, 51%, 76%);
 
-  --display-text: hsl(0, 0%, 100%);
-  --text-200: hsl(221, 14%, 31%);
-  --text-100: hsl(0, 0%, 100%);
+  // equal-toggle-button
+  --eq-toggle-background-color: hsl(6, 63%, 50%);
+  --eq-toggle-boxshadow-color: hsl(6, 70%, 34%);
+  --eq-toggle-text-color: hsl(15, 100%, 98%);
+  --eq-toggle-hover: hsl(6, 93%, 67%);
+
+  // text-color
+  --text-color: hsl(180, 100%, 99%);
+
+  //THEME TOGGLE CONTROL
+  .themetoggle__button {
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.2s ease-in;
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+      background-color: hsl(6, 93%, 67%);
+    }
+  }
+  .themetoggle__button2 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(25, 98%, 40%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(25, 100%, 61%);
+    }
+  }
+  .themetoggle__button3 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(176, 100%, 44%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(177, 100%, 79%);
+    }
+  }
 }
 // // _____________________THEME 2 COLORS_____________________
 body[data-theme="theme-2"] {
-  --background-100: hsl(0, 0%, 93%);
-  --background-100: hsl(0, 0%, 90%);
-  --background-200: hsl(0, 5%, 81%);
+  // background-colors
+  --app-background-color: hsl(0, 0%, 90%);
+  --screen-background-color: hsl(0, 0%, 93%);
+  --buttons-background-color: hsl(0, 5%, 81%);
 
-  --key-del-reset-100: hsl(185, 42%, 37%);
-  --key-del-reset-200: hsl(185, 58%, 25%);
+  // digit-buttons
 
-  --key-equal-100: hsl(25, 98%, 40%);
-  --key-equal-200: hsl(25, 99%, 27%);
+  --digit-op-background-color: hsl(45, 7%, 89%);
+  --digit-op-boxshadow-color: hsl(28, 16%, 65%);
+  --digit-op-text-color: hsl(60, 10%, 19%);
+  --digit-op-hover: hsl(48, 9%, 100%);
 
-  --key-nums-100: hsl(45, 7%, 89%);
-  --key-nums-200: hsl(35, 11%, 61%);
+  // del-reset-buttons
+  --del-reset-background-color: hsl(185, 42%, 37%);
+  --del-reset-boxshadow-color: hsl(185, 58%, 25%);
+  --del-reset-text-color: hsl(180, 100%, 100%);
+  --del-reset-hover: hsl(185, 41%, 56%);
 
-  --display-text: hsl(60, 10%, 19%);
-  --text-100: hsl(60, 10%, 19%);
-  --text-200: hsl(0, 0%, 100%);
+  // equal-toggle-button
+  --eq-toggle-background-color: hsl(25, 98%, 40%);
+  --eq-toggle-boxshadow-color: hsl(25, 99%, 27%);
+  --eq-toggle-text-color: hsl(180, 100%, 100%);
+  --eq-toggle-hover: hsl(25, 100%, 61%);
+
+  // text-color
+  --text-color: hsl(60, 10%, 19%);
+
+  //THEME TOGGLE CONTROL
+  .themetoggle__button {
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.2s ease-in;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-color: hsl(6, 93%, 67%);
+    }
+  }
+  .themetoggle__button2 {
+    opacity: 1;
+    transition: 0.2s ease-in;
+    background-color: hsl(25, 98%, 40%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(25, 100%, 61%);
+    }
+  }
+  .themetoggle__button3 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(176, 100%, 44%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(177, 100%, 79%);
+    }
+  }
 }
 
 // // _____________________THEME 3 COLORS_____________________
 body[data-theme="theme-3"] {
-  --background-100: hsl(268, 75%, 9%);
-  --background-200: hsl(268, 71%, 12%);
+  // background-colors
+  --app-background-color: hsl(268, 75%, 9%);
+  --screen-background-color: hsl(269, 74%, 12%);
+  --buttons-background-color: hsl(269, 74%, 12%);
 
-  --key-del-reset-100: hsl(285, 91%, 52%);
-  --key-del-reset-200: hsl(281, 89%, 26%);
+  // digit-buttons
 
-  --key-equal-100: hsl(25, 98%, 40%);
-  --key-equal-200: hsl(25, 99%, 27%);
+  --digit-op-background-color: hsl(269, 48%, 20%);
+  --digit-op-boxshadow-color: hsl(285, 91%, 52%);
+  --digit-op-text-color: hsl(52, 100%, 62%);
+  --digit-op-hover: hsl(280, 56%, 44%);
 
-  --key-nums-100: hsl(281, 89%, 26%);
-  --key-nums-200: hsl(285, 91%, 52%);
+  // del-reset-buttons
+  --del-reset-background-color: hsl(281, 89%, 26%);
+  --del-reset-boxshadow-color: hsl(285, 91%, 52%);
+  --del-reset-text-color: hsl(180, 100%, 100%);
+  --del-reset-hover: hsl(280, 56%, 44%);
 
-  --display-text: hsl(52, 100%, 62%);
-  --text-100: hsl(52, 100%, 62%);
-  --text-200: hsl(198, 20%, 13%);
-  --text-300: hsl(0, 0%, 100%);
+  // equal-toggle-button
+  --eq-toggle-background-color: hsl(176, 100%, 44%);
+  --eq-toggle-boxshadow-color: hsl(17825, 85%, 71%);
+  --eq-toggle-text-color: hsl(184, 87%, 9%);
+  --eq-toggle-hover: hsl(177, 100%, 79%);
+
+  // text-color
+  --text-color: hsl(52, 100%, 62%);
+
+  //THEME TOGGLE CONTROL
+  .themetoggle__button {
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.2s ease-in;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-color: hsl(6, 93%, 67%);
+    }
+  }
+  .themetoggle__button2 {
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: hsl(25, 98%, 40%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(25, 100%, 61%);
+    }
+  }
+  .themetoggle__button3 {
+    opacity: 1;
+    transition: 0.2s ease-in;
+    background-color: hsl(176, 100%, 44%);
+    &:hover {
+      opacity: 1;
+      background-color: hsl(177, 100%, 79%);
+    }
+  }
 }
 
 button {
