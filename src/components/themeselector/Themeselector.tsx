@@ -2,7 +2,7 @@ import "./themeselector.scss";
 const Themeselector = () => {
   return (
     <div className="themeselector">
-      <p className="themeselctor__label">Theme</p>
+      <p className="label">Theme</p>
       <div className="themetoggle">
         <div className="themetoggle__buttons">
           <div className="themetoggle__label">1</div>

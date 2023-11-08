@@ -51,6 +51,15 @@ export function reducer(
 
     // CHOOSE CURRENT OPERATION AND EVALUATE IF POSSIBLE
     case ACTIONS.CHOOSE_OPERATION: {
+      if (state.currentOperand === "" && payload?.operation === "-") {
+        return {
+          ...state,
+          currentOperand: `${state.currentOperand || ""}${payload?.operation}`,
+        };
+      }
+      if (state.currentOperand === "-") {
+        return state;
+      }
       if (state.currentOperand === "" && state.previousOperand === "")
         return state;
 
