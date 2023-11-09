@@ -21,6 +21,9 @@
     display: flex;
     justify-content: space-around;
     width: 50px;
+    @media (max-width: 500px) {
+      width: 100px;
+    }
   }
 
   &__label {
@@ -35,6 +38,9 @@
     background-color: var(--buttons-background-color);
     border-radius: 500px;
     position: relative;
+    @media (max-width: 500px) {
+      width: 100px;
+    }
   }
 
   &__button {

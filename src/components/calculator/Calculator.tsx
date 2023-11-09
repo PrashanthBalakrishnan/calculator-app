@@ -47,7 +47,7 @@ const Calculator = () => {
 
         <DigitButton digit="." dispatch={dispatch} />
         <DigitButton digit="0" dispatch={dispatch} />
-        <OperationButton operation="÷" dispatch={dispatch} />
+        <OperationButton operation="/" dispatch={dispatch} />
         <OperationButton operation="x" dispatch={dispatch} />
         <button
           className="span-two calculator__del-reset"

@@ -19,7 +19,7 @@ export function evaluate({
     case "x":
       computation = prev * current;
       break;
-    case "÷":
+    case "/":
       computation = prev / current;
       break;
   }
