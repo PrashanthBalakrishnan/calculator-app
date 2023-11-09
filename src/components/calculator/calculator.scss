@@ -4,6 +4,9 @@
   flex-direction: column;
   row-gap: 25px;
   color: var(--text-color);
+  @media (max-width: 500px) {
+    height: fit-content;
+  }
 
   &__header {
     display: flex;

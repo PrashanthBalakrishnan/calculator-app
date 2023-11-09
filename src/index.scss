@@ -234,6 +234,7 @@ body[data-theme="theme-3"] {
     background-color: hsl(6, 63%, 50%);
     transition: 0.2s ease-in;
     opacity: 0;
+
     &:hover {
       opacity: 1;
       background-color: hsl(6, 93%, 67%);
