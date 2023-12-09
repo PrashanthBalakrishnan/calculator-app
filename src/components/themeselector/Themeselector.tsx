@@ -12,14 +12,17 @@ const Themeselector = () => {
         <div className="themetoggle__indicator">
           <button
             className="themetoggle__button"
+            aria-label="theme toggle for theme 1"
             onClick={() => document.body.setAttribute("data-theme", "theme-1")}
           />
           <button
             className="themetoggle__button2"
+            aria-label="theme toggle for theme 2"
             onClick={() => document.body.setAttribute("data-theme", "theme-2")}
           />
           <button
             className="themetoggle__button3"
+            aria-label="theme toggle for theme 2"
             onClick={() => document.body.setAttribute("data-theme", "theme-3")}
           />
         </div>
